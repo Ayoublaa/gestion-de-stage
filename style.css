@@ -1,0 +1,136 @@
+/* styles.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #1c1c3c, #111124);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #068a32;
+}
+
+.hero {
+    text-align: center;
+    margin-top: 100px;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #068a32;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #ddd;
+    margin-bottom: 40px;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.card {
+    background: linear-gradient(145deg, #292946, #202037);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s, box-shadow 0.4s, background 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 204, 0, 0.2), transparent);
+    transition: transform 0.4s ease;
+    transform: scale(0);
+    z-index: 0;
+}
+
+.card:hover::before {
+    transform: scale(1);
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(145deg, #363659, #292946);
+}
+
+.card h3 {
+    font-size: 1.8em;
+    color: #068a32;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.card p {
+    font-size: 1em;
+    color: #ddd;
+    position: relative;
+    z-index: 1;
+}
+
+footer {
+    background: #111124;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 50px;
+    border-top: 2px solid #292946;
+}
+
+footer a {
+    color: #068a32;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
